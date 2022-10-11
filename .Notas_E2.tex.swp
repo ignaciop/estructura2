@@ -1,0 +1,135 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper]{article}
+
+\usepackage{mhchem}
+
+\usepackage{gensymb}
+
+%\usepackage[super]{natbib}
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+
+\usepackage{lmodern}
+
+\usepackage[hyphenbreaks]{breakurl}
+
+\usepackage[hyphens]{url}
+
+%\usepackage[super,sort&compress]{natbib}
+%\usepackage{natbib}
+%\setlength{\bibsep}{0.0pt}
+
+\usepackage{subcaption}
+
+\usepackage{graphicx}
+
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[spanish]{babel} % Language hyphenation and typographical rules
+
+\usepackage[numbib,notlof,notlot,nottoc]{tocbibind} % Shows bibliography as a section
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+
+\usepackage[section]{placeins}
+
+\usepackage{float}
+
+\usepackage{booktabs} % Horizontal rules in tables
+
+\usepackage{enumitem} % Customized lists
+
+
+\usepackage{abstract} % Allows abstract customization
+
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{Apuntes y ejercicios resueltos de Estructura de la Materia 2 $\bullet$ Ignacio Poggi} % Custom header text
+\fancyfoot[C]{\thepage} % Custom footer text
+
+\usepackage{titling} % Customizing the title section
+
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\setlength{\droptitle}{-4\baselineskip} % Move the title up
+
+\pretitle{\begin{center}\LARGE\bfseries} % Article title formatting
+\posttitle{\end{center}} % Article title closing formatting
+\title{Estructura de la Materia 2} % Article title
+\author{%
+\textsc{Ignacio Poggi} \\[1ex] % Your name
+\normalsize \href{mailto:ignaciop.3@gmail.com}{ignaciop.3@gmail.com} % Your email address
+}
+
+\date{\today} % Leave empty to omit a date
+\renewcommand{\maketitlehookd}{%
+\begin{abstract}
+\noindent Apuntes y ejercicios resueltos de Estructura de la Materia 2 (2º cuatrimestre 2022).
+\end{abstract}
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\maketitle
+
+% Print the title
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section{Gu\'ia 1: Redes Cristalinas y Espacio Rec\'iproco}
+
+\subsection{}
+
+\begin{itemize}
+\item En este \'item nos piden describir una estructura c\'ubica centrada en la base (SC con puntos adicionales en las caras horizontales de la celda).
+
+
+\end{itemize}
+
+Integrando (\ref{eq:primerprincipio}) tenemos
+
+\begin{equation}
+\label{eq:primerprincipio2}
+\Delta E = W_{ext} + Q = -W + Q
+\end{equation}
+
+donde $W$ es el trabajo del sistema y $Q$ es el calor absorbido o cedido por el sistema.
+
+
+Definimos \textit{capacidad t\'ermica o calor\'ifica} de una sustancia a la cantidad
+
+$$C_{X} = \frac{dQ}{dT}\bigg|_{X}$$
+
+Esto nos da la relaci\'on entre la cantidad infinitesimal de calor absorbido por una sustancia en un proceso reversible $X$ y el incremento infinitesimal de temperatura que sufre. Las cantidades m\'as comunes son $C_{V}$ (a $V = cte$) y $C_{P}$ (a $P = cte$):\\
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+\newpage
+\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+ 
+\end{thebibliography}
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

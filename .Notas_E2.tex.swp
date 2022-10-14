@@ -531,8 +531,52 @@ $$\vec{b}_{2} = 2\pi  \frac{\vec{a}_{3} \times \vec{a}_{1}}{\vec{a}_{1} \cdot (\
 
 $$\vec{b}_{3} = 2\pi  \frac{\vec{a}_{2} \times \vec{a}_{1}}{\vec{a}_{1} \cdot (\vec{a}_{2} \times \vec{a}_{3})}$$
 
-satisfaciendo que $\vec{b}_{i} \cdot \vec{a}_{j} = 2\pi \delta_{ij}$ 
+satisfaciendo que $\vec{b}_{i} \cdot \vec{a}_{j} = 2\pi \delta_{ij}$\\
 
+De acuerdo con la ecuaci\'on (\ref{eq:ekr}), la red rec\'iproca de la red rec\'iproca es un conjunto de todos los vectores $\vec{G}$ que satisfacen:
+
+$$e^{i \vec{G} \cdot \vec{K}} = 1$$
+
+$\forall \vec{K} \in$ RR. Como cualquier vector $\vec{R}$ de la RD tiene esta propiedad (nuevamente, por (\ref{eq:ekr})), todos los vectores de la RD estar\'an en la RR de la RR.\\
+
+\begin{itemize}
+\item\textbf{BCC:}
+
+Aplicamos las definiciones para $\vec{b}_{i}$, teniendo en cuenta los vectores primitivos de la red BCC:
+
+$$\begin{cases}
+\vec{a}_{1} = a\hat{x} \\
+\vec{a}_{2} = \frac{a}{2}(\hat{x} + \hat{y} + \hat{z}) \\
+\vec{a}_{3} = a\hat{z}
+\end{cases}$$
+
+Sabemos que $V_{BCC} = \vec{a}_{1} \cdot (\vec{a}_{2} \times \vec{a}_{3}) = \frac{a^{3}}{2}$, luego:
+
+$$ \vec{a}_{2} \times \vec{a}_{3} = \begin{vmatrix}
+\frac{a}{2} & \frac{a}{2} & \frac{a}{2} \\ 
+0 & 0 & a
+\end{vmatrix}  = (\frac{a^{2}}{2}, -\frac{a^{2}}{2}, 0) = \frac{a^{2}}{2}(\hat{x} - \hat{y})$$
+
+$$ \vec{a}_{3} \times \vec{a}_{1} = \begin{vmatrix}
+0 & 0 & a \\
+a & 0 & 0
+\end{vmatrix}  = (0, a^{2}, 0) = a^{2}\hat{y}$$
+
+$$ \vec{a}_{2} \times \vec{a}_{1} = \begin{vmatrix}
+\frac{a}{2} & \frac{a}{2} & \frac{a}{2} \\ 
+a & 0 & 0
+\end{vmatrix}  = (0, \frac{a^{2}}{2}, -\frac{a^{2}}{2}) = \frac{a^{2}}{2}(\hat{y} - \hat{z})$$
+
+Resultando:
+
+$$\begin{cases}
+\vec{b}_{1} = 2\pi \frac{\frac{a^{2}}{2}(\hat{x} - \hat{y})}{\frac{a^{3}}{2}} = \frac{2\pi}{a}(\hat{x} - \hat{y})\\
+\vec{b}_{2} = 2\pi \frac{a^{2}\hat{y}}{\frac{a^{3}}{2}} = \frac{4\pi}{a}\hat{y}\\
+\vec{b}_{3} = 2\pi \frac{\frac{a^{2}}{2}(\hat{y} - \hat{z})}{\frac{a^{3}}{2}} = \frac{2\pi}{a}(\hat{y} - \hat{z})
+\end{cases}$$
+
+
+\end{itemize}
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
 %----------------------------------------------------------------------------------------

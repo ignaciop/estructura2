@@ -6,6 +6,8 @@
 
 \usepackage{amsmath}
 
+\usepackage{amssymb}
+
 \usepackage{mhchem}
 
 \usepackage{gensymb}
@@ -360,6 +362,176 @@ $$ \rho_{DIAMANTE} = \frac{\frac{4}{3}\pi r^{3}}{V_{DIAMANTE}} = \frac{\frac{4}{
 
 \subsection{}
 
+La estructura subyacente a una HCP (Hexagonal Closed Packed) es una RB hexagonal simple; conformada por varias redes triangulares apiladas. La direcci\'on de apilamiento (usualmente dada por el vector primitivo $\vec{a}_{3}$) se conoce como \textbf{\textit{eje c}}. Sus vectores primitivos son:
+
+$$\begin{cases}
+\vec{a}_{1} = a\hat{x} \\
+\vec{a}_{2} = \frac{a}{2}\hat{x} + \frac{\sqrt{3}}{2}a\hat{y} \\
+\vec{a}_{3} = c\hat{z}
+\end{cases}$$
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth,height=0.4\linewidth]{red3d_triangular.png}
+  \caption{Red hexagonal simple. Los primeros dos vectores generan la red triangular en el plano $xy$, el tercero lo apila a una distancia $c$.}
+  \label{fig:red3d_triangular}
+\end{figure}
+
+La red HCP consiste en dos redes hexagonales simples intercaladas, desplazadas una de otra por $\frac{\vec{a}_{1}}{3} + \frac{\vec{a}_{2}}{3} + \frac{\vec{a}_{3}}{2}$, como muestra la siguiente figura:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\linewidth,height=0.5\linewidth]{red3d_hcp.png}
+  \caption{Red HCP}
+  \label{fig:red3d_hcp}
+\end{figure}
+
+Sus vectores primitivos son:
+
+$$\begin{cases}
+\vec{a}_{1} = \frac{a}{2}\hat{x} - \frac{\sqrt{3}}{2}a\hat{y} \\
+\vec{a}_{2} = \frac{a}{2}\hat{x} + \frac{\sqrt{3}}{2}a\hat{y} \\
+\vec{a}_{3} = c\hat{z}
+\end{cases}$$
+
+
+Finalmente, calculemos cual es el valor $\frac{c}{a}$ para una red HCP ideal. En la siguiente figura, observamos con detalle una parte de la red para facilitar el c\'alculo:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\linewidth,height=0.4\linewidth]{red3d_hcp_r.png}
+  \caption{Detalle de una zona de la red HCP.}
+  \label{fig:red3d_hcp_r}
+\end{figure}
+
+Aqu\'i, $h$ es la altura del tri\'angulo equilatero de lado $a$ (par\'ametro de red). Luego, tenemos la distancia $\frac{c}{2}$, desde el centro de dicho tri\'angulo hasta uno de los puntos de la red triangular intercalada (detalle en figura (\ref{fig:red3d_hcp})). Por \'ultimo, $x$ es la distancia entre uno de los \'atomos de la red tri\'angular hasta el centro del mismo. Entonces:
+
+$$h = \sqrt{a^{2} + \bigg(\frac{a}{2}\bigg)^{2}} = a\sqrt{1 - \frac{1}{4}} = \sqrt{\frac{3}{4}}a$$
+
+$$x = \frac{2}{3}h = \frac{2}{3}\sqrt{\frac{3}{4}}a = \frac{a}{\sqrt{3}}$$
+
+$$\Rightarrow \frac{c}{2} = \sqrt{a^{2} - x^{2}} = \sqrt{a^{2} - \frac{a^{2}}{3}} = \sqrt{\frac{2}{3}}a$$
+
+$$\Rightarrow \frac{c}{a} = \sqrt{\frac{8}{3}} \approx 1.63$$
+
+Obtenemos un valor muy cercano a las estructuras del Mg y Nd.\\
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\linewidth,height=0.3\linewidth]{red3d_hcp_n.png}
+  \caption{Esquema de la red HCP a primeros, segundos y terceros vecinos.}
+  \label{fig:red3d_hcp_n}
+\end{figure}
+
+En el esquema anterior, se muestran los primeros vecinos de la red HCP. En el plano del \'atomo de referencia (violeta), tenemos 6 primeros vecinos. Los \'atomos azules tambi\'en son primeros vecinos, que pertenecen a las redes hexagonales intercaladas en $\pm \frac{c}{2}$, d\'andonos un total de \textbf{12 primeros vecinos}. Luego, hay \textbf{2 segundos vecinos}, marcados en rojo; y \textbf{12 terceros vecinos} en verde.
+
+\subsection{}
+
+\begin{itemize}
+\item La red del Cloruro de Sodio (NaCl) puede describirse como dos FCC con una base en un ion Sodio en $\vec{0}$ y un ion Cloro en $\frac{a}{2}(\hat{x} + \hat{y} + \hat{z})$ (centro de la celda c\'ubica):
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\linewidth,height=0.3\linewidth]{nacl.png}
+  \caption{Cloruro de Sodio como dos FCC intercaladas.}
+  \label{fig:nacl}
+\end{figure}
+
+
+Vectores primitivos:
+
+$$\begin{cases}
+\vec{a}_{1} = a\hat{x} \\
+\vec{a}_{2} = \frac{a}{\sqrt{2}}(\hat{x} + \hat{y}) \\
+\vec{a}_{3} = \frac{a}{\sqrt{2}}(\hat{x} + \hat{z})
+\end{cases}$$
+
+Base:
+
+$$\{\vec{0}, \frac{a}{2}(\hat{x} + \hat{y} + \hat{z}) \}$$
+
+\item Para el Cloruro de Cesio (CsCl), tenemos:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\linewidth,height=0.3\linewidth]{cscl.png}
+  \caption{Cloruro de Cesio como dos SC intercaladas.}
+  \label{fig:cscl}
+\end{figure}
+
+Vectores primitivos:
+
+$$\begin{cases}
+\vec{a}_{1} = a\hat{x} \\
+\vec{a}_{2} = a\hat{y} \\
+\vec{a}_{3} = a\hat{z}
+\end{cases}$$
+
+Base:
+
+$$\{\vec{0}, \frac{a}{2\sqrt{3}}(\hat{x} + \hat{y} + \hat{z}) \}$$ 
+
+\item Por \'ultimo, la zincblenda (ZnS) est\'a conformada por una estructura en diamante:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\linewidth,height=0.3\linewidth]{zns.png}
+  \caption{Esquema de la zincblenda.}
+  \label{fig:zns}
+\end{figure}
+
+Vectores primitivos:
+
+$$\begin{cases}
+\vec{a}_{1} = \frac{a}{2}(\hat{x} + \hat{y}) \\
+\vec{a}_{2} = \frac{a}{2}(\hat{x} + \hat{z}) \\
+\vec{a}_{3} = \frac{a}{2}(\hat{y} + \hat{z})
+\end{cases}$$
+
+Base:
+
+$$\{\vec{0}, \frac{a}{4}(\hat{x} + \hat{y} + \hat{z}) \}$$ 
+\end{itemize}
+
+\subsection{-}
+\subsection{-}
+
+\subsection{}
+
+Antes de hacer este ejercicio, repasemos algunas definiciones: \\
+
+La \textbf{red directa} (RD) o red de Bravais se describe como:
+
+\begin{equation}
+\label{eq:reddirecta}
+\vec{R} = n_{1}\vec{a}_{1} + n_{2}\vec{a}_{2} + n_{3}\vec{a}_{3}
+\end{equation}
+
+donde $n_{i} \in \mathbb{Z}$ y $\vec{a}_{i}$ son los vectores primitivos.\\
+
+Por otro lado, la \textbf{red rec\'iproca} (RR) se describe como los vectores $\vec{K}$ que cumplen la relaci\'on:
+
+\begin{equation}
+\label{eq:ekr}
+e^{\vec{K} \cdot \vec{R}} = 1
+\end{equation}
+
+donde $\vec{R}$ es la red de Bravais correspondiente. Una manera m\'as sencilla de definirlos es la siguiente:
+
+\begin{equation}
+\label{eq:redreciproca}
+\vec{K} = l_{1}\vec{b}_{1} + l_{2}\vec{b}_{2} + l_{3}\vec{b}_{3}
+\end{equation}
+
+Nuevamente, $l_{i} \in \mathbb{Z}$ y para $\vec{b}_{i}$ se utiliza esta definici\'on:
+
+$$\vec{b}_{1} = 2\pi  \frac{\vec{a}_{2} \times \vec{a}_{3}}{\vec{a}_{1} \cdot (\vec{a}_{2} \times \vec{a}_{3})}$$
+
+$$\vec{b}_{2} = 2\pi  \frac{\vec{a}_{3} \times \vec{a}_{1}}{\vec{a}_{1} \cdot (\vec{a}_{2} \times \vec{a}_{3})}$$ 
+
+$$\vec{b}_{3} = 2\pi  \frac{\vec{a}_{2} \times \vec{a}_{1}}{\vec{a}_{1} \cdot (\vec{a}_{2} \times \vec{a}_{3})}$$
+
+satisfaciendo que $\vec{b}_{i} \cdot \vec{a}_{j} = 2\pi \delta_{ij}$ 
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST

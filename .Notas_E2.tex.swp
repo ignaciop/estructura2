@@ -529,7 +529,7 @@ $$\vec{b}_{1} = 2\pi  \frac{\vec{a}_{2} \times \vec{a}_{3}}{\vec{a}_{1} \cdot (\
 
 $$\vec{b}_{2} = 2\pi  \frac{\vec{a}_{3} \times \vec{a}_{1}}{\vec{a}_{1} \cdot (\vec{a}_{2} \times \vec{a}_{3})}$$ 
 
-$$\vec{b}_{3} = 2\pi  \frac{\vec{a}_{2} \times \vec{a}_{1}}{\vec{a}_{1} \cdot (\vec{a}_{2} \times \vec{a}_{3})}$$
+$$\vec{b}_{3} = 2\pi  \frac{\vec{a}_{1} \times \vec{a}_{2}}{\vec{a}_{1} \cdot (\vec{a}_{2} \times \vec{a}_{3})}$$
 
 satisfaciendo que $\vec{b}_{i} \cdot \vec{a}_{j} = 2\pi \delta_{ij}$\\
 
@@ -562,21 +562,142 @@ $$ \vec{a}_{3} \times \vec{a}_{1} = \begin{vmatrix}
 a & 0 & 0
 \end{vmatrix}  = (0, a^{2}, 0) = a^{2}\hat{y}$$
 
-$$ \vec{a}_{2} \times \vec{a}_{1} = \begin{vmatrix}
-\frac{a}{2} & \frac{a}{2} & \frac{a}{2} \\ 
-a & 0 & 0
-\end{vmatrix}  = (0, \frac{a^{2}}{2}, -\frac{a^{2}}{2}) = \frac{a^{2}}{2}(\hat{y} - \hat{z})$$
+$$ \vec{a}_{1} \times \vec{a}_{2} = \begin{vmatrix}
+a & 0 & 0 \\ 
+\frac{a}{2} & \frac{a}{2} & \frac{a}{2}
+\end{vmatrix}  = (0, -\frac{a^{2}}{2}, \frac{a^{2}}{2}) = \frac{a^{2}}{2}(-\hat{y} + \hat{z})$$
 
-Resultando:
-
-$$\begin{cases}
+$$\Rightarrow \begin{cases}
 \vec{b}_{1} = 2\pi \frac{\frac{a^{2}}{2}(\hat{x} - \hat{y})}{\frac{a^{3}}{2}} = \frac{2\pi}{a}(\hat{x} - \hat{y})\\
 \vec{b}_{2} = 2\pi \frac{a^{2}\hat{y}}{\frac{a^{3}}{2}} = \frac{4\pi}{a}\hat{y}\\
-\vec{b}_{3} = 2\pi \frac{\frac{a^{2}}{2}(\hat{y} - \hat{z})}{\frac{a^{3}}{2}} = \frac{2\pi}{a}(\hat{y} - \hat{z})
+\vec{b}_{3} = 2\pi \frac{\frac{a^{2}}{2}(-\hat{y} + \hat{z})}{\frac{a^{3}}{2}} = \frac{2\pi}{a}(-\hat{y} + \hat{z})
 \end{cases}$$
 
+Podemos ver que la RR de una BCC es una FCC de lado $\frac{4 \pi}{a}$.
+
+\item\textbf{FCC:}
+
+Vectores primitivos de la red FCC:
+
+$$\begin{cases}
+\vec{a}_{1} = \frac{a}{2}(\hat{x} + \hat{y}) \\
+\vec{a}_{2} = \frac{a}{2}(\hat{x} + \hat{z}) \\
+\vec{a}_{3} = \frac{a}{2}(\hat{y} + \hat{z})
+\end{cases}$$
+
+Sabemos que $V_{FCC} = \vec{a}_{1} \cdot (\vec{a}_{2} \times \vec{a}_{3}) = \frac{a^{3}}{4}$, luego:
+
+$$ \vec{a}_{2} \times \vec{a}_{3} = \begin{vmatrix}
+\frac{a}{2} & 0 & \frac{a}{2} \\ 
+0 & \frac{a}{2} & \frac{a}{2}
+\end{vmatrix}  = (-\frac{a^{2}}{4}, -\frac{a^{2}}{4}, \frac{a^{2}}{4}) = \frac{a^{2}}{4}(-\hat{x} - \hat{y} + \hat{z})$$
+
+$$ \vec{a}_{3} \times \vec{a}_{1} = \begin{vmatrix}
+0 & \frac{a}{2} & \frac{a}{2} \\
+\frac{a}{2} & \frac{a}{2} & 0
+\end{vmatrix}  = (-\frac{a^{2}}{4}, \frac{a^{2}}{4}, -\frac{a^{2}}{4}) = \frac{a^{2}}{4}(-\hat{x} + \hat{y} - \hat{z})$$
+
+$$ \vec{a}_{1} \times \vec{a}_{2} = \begin{vmatrix}
+\frac{a}{2} & \frac{a}{2} & 0 \\ 
+\frac{a}{2} & 0 & \frac{a}{2}
+\end{vmatrix}  = (\frac{a^{2}}{4}, -\frac{a^{2}}{4}, -\frac{a^{2}}{4}) = \frac{a^{2}}{4}(\hat{x} - \hat{y} - \hat{z})$$
+
+$$\Rightarrow \begin{cases}
+\vec{b}_{1} = 2\pi \frac{\frac{a^{2}}{4}(-\hat{x} - \hat{y} + \hat{z})}{\frac{a^{3}}{4}} = \frac{2\pi}{a}(-\hat{x} - \hat{y} + \hat{z})\\
+\vec{b}_{2} = 2\pi \frac{\frac{a^{2}}{4}(-\hat{x} + \hat{y} - \hat{z})}{\frac{a^{3}}{4}} = \frac{2\pi}{a}(-\hat{x} + \hat{y} - \hat{z})\\
+\vec{b}_{3} = 2\pi \frac{\frac{a^{2}}{4}(\hat{x} - \hat{y} - \hat{z})}{\frac{a^{3}}{4}} = \frac{2\pi}{a}(\hat{x} - \hat{y} - \hat{z})
+\end{cases}$$
+
+Vemos que la RR de una FCC es una BCC de lado $\frac{4 \pi}{a}$ (pues $\frac{2 \pi}{a} = \frac{4 \pi}{a}\frac{1}{2}$).
 
 \end{itemize}
+
+Algunos ejemplos de redes autorrec\'iprocas (RD = RR) son la SC y la hexagonal simple, a menos de las constantes de red.
+
+\subsection{}
+
+Para ver las zonas de Brillouin (ZB), primero calculemos la RR de la SC en dos dimensiones:
+
+$$\begin{cases}
+\vec{a}_{1} = a\hat{x} \\
+\vec{a}_{2} = a\hat{y}
+\end{cases}$$
+
+$$\Rightarrow \begin{cases}
+\vec{b}_{1} = \frac{2 \pi}{a}\hat{x} \\
+\vec{b}_{2} = \frac{2 \pi}{a}\hat{y}
+\end{cases}$$
+
+A continuaci\'on, se detallan a modo de receta los pasos para dibujar las primeras ZB de la red:
+
+\begin{itemize}
+\item Identificar los primeros vecinos en la RR y dibujar una linea perpendicular (plano de Bragg) atravesando el punto medio entre el \'atomo de referencia y cada uno de sus vecinos. Luego, el \'area roja que encierra al origen entre los planos de Bragg es la \textbf{primera zona de Brillouin (1ZB) o celda de Wigner-Seitz}:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.3\linewidth,height=0.3\linewidth]{pzb.png}
+  \caption{Construcci\'on de la 1ZB para la red SC.}
+  \label{fig:pzb}
+\end{figure}
+
+\item La \textbf{segunda zona de Brillouin (2ZB)} es el espacio de la RR en el cual un punto tiene un plano de Bragg entre \'este y el origen. Como muestra la siguiente figura, trazamos los planos de Bragg correspondientes a los segundos vecinos y marcamos el \'area en amarillo:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.3\linewidth,height=0.3\linewidth]{szb.png}
+  \caption{Construcci\'on de la 2ZB para la red SC. Notar los planos de Bragg entre los segundos vecinos y el origen (mostrados en la figura (\ref{fig:pzb})), para poder identificar correctamente la zona.}
+  \label{fig:szb}
+\end{figure}
+
+\end{itemize}
+
+Sistem\'aticamente, se construyen as\'i las siguientes zonas de Brillouin, tomando los terceros vecinos, etc. En el siguiente esquema se muestran las tres primeras ZB para la red SC:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.3\linewidth,height=0.3\linewidth]{zb.png}
+  \caption{1ZB (rojo), 2ZB (amarillo) y 3ZB (violeta) de la red SC bidimensional.}
+  \label{fig:zb}
+\end{figure}
+
+Los volumenes de cada zona ser\'an los mismos, debido a que la RR es peri\'odica, para un punto fuera de la 1ZB existe un \'unico vector de la RR que lo traslade nuevamente hacia la primera zona, por lo tanto todas las zonas tienen el mismo \'area o volumen.\\
+
+En nuestro caso, $V_{1ZB} = (\frac{2 \pi}{a})^{2} = \frac{4 \pi^{2}}{a^{2}} = V_{2ZB} = V_{3ZB}$
+
+\subsection{}
+
+\begin{itemize}
+\item Vectores primitivos de la red hexagonal:
+
+$$\begin{cases}
+\vec{a}_{1} = - \frac{\sqrt{3}}{2}a\hat{x} + \frac{a}{2}\hat{y} \\
+\vec{a}_{2} = - \frac{\sqrt{3}}{2}a\hat{x} + \frac{a}{2}\hat{y} \\
+\vec{a}_{3} = c\hat{z}
+\end{cases}$$
+
+$$\Rightarrow V_{Hexagonal} = | \vec{a}_{1} \cdot (\vec{a}_{2} \times \vec{a}_{3})| = \frac{\sqrt{3}}{2}a^{2}c$$
+
+\item Vectores de la red rec\'iproca (ver ejercicio 9 para el procedimiento general en detalle):
+
+$$\begin{cases}
+\vec{b}_{1} = \frac{2 \pi}{\sqrt{3}a}\hat{x} + \frac{2 \pi}{a}\hat{y} \\
+\vec{b}_{2} = - \frac{2 \pi}{\sqrt{3}a}\hat{x} + \frac{2 \pi}{a}\hat{y} \\
+\vec{b}_{3} = \frac{2 \pi}{c}\hat{z}
+\end{cases}$$
+
+\item Esquema y descripci\'on de la primera zona de Brillouin de la red hexagonal:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth,height=0.5\linewidth]{pzb_hex.png}
+  \caption{Las bisectrices en los puntos medios de $\vec{b}_{1}$, -$\vec{b}_{1}$, $\vec{b}_{2}$, -$\vec{b}_{2}$, $\vec{b}_{1} - \vec{b}_{2}$ y $\vec{b}_{2} - \vec{b}_{1}$ forman un hex\'agono (mostrados en detalle en la celda de Wigner-Seitz). La 1ZB (prisma sombreado en color rojo) estar\'a dada por \'este hex\'agono y la bisectriz en el punto medio entre $\vec{b}_{3}$ y $-\vec{b}_{3}$.}
+  \label{fig:pzb_hex}
+\end{figure}
+
+\end{itemize}
+
+\subsection{}
+
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
 %----------------------------------------------------------------------------------------

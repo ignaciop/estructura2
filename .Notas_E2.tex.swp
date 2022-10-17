@@ -698,6 +698,97 @@ $$\begin{cases}
 
 \subsection{}
 
+Los \'indices de Miller est\'an dados por los coeficientes $(h, k, l)$ que acompa\~nan a los $\vec{b}_{i}$ en el vector del espacio rec\'iproco $\vec{K} = h\vec{b}_{1} + k\vec{b}_{2} + l\vec{b}_{3}$
+
+\begin{itemize}
+\item \textbf{Red SC:}
+
+$$\begin{cases}
+\vec{b}_{1} = \frac{2 \pi}{a}\hat{x}\\
+\vec{b}_{2} = \frac{2 \pi}{a}\hat{y} \\
+\vec{b}_{3} = \frac{2 \pi}{a}\hat{z}
+\end{cases}$$
+
+$$\Rightarrow \vec{K}_{hkl} = \frac{2 \pi}{a}h\hat{x} + \frac{2 \pi}{a}k\hat{y} + \frac{2 \pi}{a}l\hat{z}$$
+
+Veamos ahora los $\vec{K}$ y la distancia entre planos $d$ para los \'indices pedidos en el enunciado:
+
+$$(100) \rightarrow \vec{K}_{100} = \frac{2 \pi}{a}(1\hat{x} + 0\hat{y} + 0\hat{z}) = \frac{2 \pi}{a}\hat{x}$$
+
+$$(110) \rightarrow \vec{K}_{110} = \frac{2 \pi}{a}(1\hat{x} + 1\hat{y} + 0\hat{z}) = \frac{2 \pi}{a}(\hat{x} + \hat{y})$$
+
+$$(111) \rightarrow \vec{K}_{111} = \frac{2 \pi}{a}(1\hat{x} + 1\hat{y} + 1\hat{z}) = \frac{2 \pi}{a}(\hat{x} + \hat{y} + \hat{z})$$
+
+DIBUJO DE ESTOS PLANOS
+
+Distancia entre planos $d = \frac{2\pi}{|\vec{K}|}$:
+
+$$| \vec{K}_{100} | = \sqrt{\bigg(\frac{2 \pi}{a}\bigg)^{2}} =  \frac{2\pi}{d_{100}} \Rightarrow d_{100} = a$$
+
+$$| \vec{K}_{110} | = \sqrt{\bigg(\frac{2 \pi}{a}\bigg)^{2} + \bigg(\frac{2 \pi}{a}\bigg)^{2}} = \sqrt{2} \frac{2\pi}{a} =  \frac{2\pi}{d_{110}} \Rightarrow d_{110} = \frac{a}{\sqrt{2}}$$
+
+$$| \vec{K}_{111} | = \sqrt{\bigg(\frac{2 \pi}{a}\bigg)^{2} + \bigg(\frac{2 \pi}{a}\bigg)^{2} + \bigg(\frac{2 \pi}{a}\bigg)^{2}} = \sqrt{3} \frac{2\pi}{a} =  \frac{2\pi}{d_{111}} \Rightarrow d_{111} = \frac{a}{\sqrt{3}}$$
+\\
+
+\item \textbf{Red FCC:}
+
+$$\begin{cases}
+\vec{b}_{1} = \frac{2 \pi}{a}(-\hat{x} - \hat{y} + \hat{z})\\
+\vec{b}_{2} = \frac{2 \pi}{a}(-\hat{x} + \hat{y} - \hat{z}) \\
+\vec{b}_{3} = \frac{2 \pi}{a}(\hat{x} - \hat{y} - \hat{z})
+\end{cases}$$
+
+$$\Rightarrow \vec{K}_{hkl} = \frac{2 \pi}{a}h(-\hat{x} - \hat{y} + \hat{z}) + \frac{2 \pi}{a}k(-\hat{x} + \hat{y} - \hat{z}) + \frac{2 \pi}{a}l(\hat{x} - \hat{y} - \hat{z})$$
+
+
+
+$$(100) \rightarrow \vec{K}_{100} = \frac{2 \pi}{a}(-\hat{x} - \hat{y} + \hat{z})$$
+
+$$(110) \rightarrow \vec{K}_{110} = \frac{2 \pi}{a}(-\hat{x} - \hat{y} + \hat{z} -\hat{x} + \hat{y} - \hat{z}) = -\frac{4 \pi}{a}\hat{x}$$
+
+$$(111) \rightarrow \vec{K}_{111} = \frac{2 \pi}{a}(-\hat{x} - \hat{y} + \hat{z} -\hat{x} + \hat{y} - \hat{z} + \hat{x} - \hat{y} - \hat{z}) = \frac{2 \pi}{a}(-\hat{x} - \hat{y} - \hat{z})$$
+
+DIBUJO DE ESTOS PLANOS
+
+Distancia entre planos $d = \frac{2\pi}{|\vec{K}|}$:
+
+$$| \vec{K}_{100} | = \sqrt{\bigg(-\frac{2 \pi}{a}\bigg)^{2} + \bigg(-\frac{-2 \pi}{a}\bigg)^{2} + \bigg(\frac{2 \pi}{a}\bigg)^{2}} =  \sqrt{3} \frac{2\pi}{a} =  \frac{2\pi}{d_{100}} \Rightarrow d_{100} = \frac{a}{\sqrt{3}}$$
+
+$$| \vec{K}_{110} | = \sqrt{\bigg(-\frac{4 \pi}{a}\bigg)^{2}} = \frac{4\pi}{a} =  \frac{2\pi}{d_{110}} \Rightarrow d_{110} = \frac{a}{2}$$
+
+$$| \vec{K}_{111} | = | \vec{K}_{100} | \Rightarrow d_{111} = \frac{a}{\sqrt{3}}$$
+\\
+
+\item \textbf{Red BCC:}
+
+$$\begin{cases}
+\vec{b}_{1} = \frac{2 \pi}{a}(\hat{x} - \hat{y})\\
+\vec{b}_{2} = \frac{4 \pi}{a}\hat{y}\\
+\vec{b}_{3} = \frac{2 \pi}{a}(- \hat{y} + \hat{z})
+\end{cases}$$
+
+$$\Rightarrow \vec{K}_{hkl} = \frac{2 \pi}{a}h(\hat{x} - \hat{y}) + \frac{4 \pi}{a}k\hat{y} + \frac{2 \pi}{a}l(-\hat{y} + \hat{z})$$
+
+
+
+$$(100) \rightarrow \vec{K}_{100} = \frac{2 \pi}{a}(\hat{x} - \hat{y})$$
+
+$$(110) \rightarrow \vec{K}_{110} = \frac{2 \pi}{a}(\hat{x} - \hat{y} + 2\hat{y}) = \frac{2 \pi}{a}(\hat{x} + \hat{y})$$
+
+$$(111) \rightarrow \vec{K}_{111} = \frac{2 \pi}{a}(\hat{x} - \hat{y} + 2\hat{y} - \hat{y} + \hat{z}) = \frac{2 \pi}{a}(\hat{x} + \hat{z})$$
+
+DIBUJO DE ESTOS PLANOS
+
+Distancia entre planos $d = \frac{2\pi}{|\vec{K}|}$:
+
+$$| \vec{K}_{100} | = \sqrt{\bigg(\frac{2 \pi}{a}\bigg)^{2} + \bigg(-\frac{2 \pi}{a}\bigg)^{2}} =  \sqrt{2} \frac{2\pi}{a} =  \frac{2\pi}{d_{100}} \Rightarrow d_{100} = \frac{a}{\sqrt{2}}$$
+
+$$| \vec{K}_{110} | =  \sqrt{\bigg(\frac{2 \pi}{a}\bigg)^{2} + \bigg(\frac{2 \pi}{a}\bigg)^{2}} =  \sqrt{2} \frac{2\pi}{a} =  \frac{2\pi}{d_{110}} \Rightarrow d_{110} = \frac{a}{\sqrt{2}}$$
+
+$$| \vec{K}_{111} | = | \vec{K}_{110} | \Rightarrow d_{111} = \frac{a}{\sqrt{2}}$$
+
+\end{itemize}
+
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
 %----------------------------------------------------------------------------------------

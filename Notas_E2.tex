@@ -1,3 +1,4 @@
+
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
@@ -698,7 +699,7 @@ $$\begin{cases}
 
 \subsection{}
 
-Los \'indices de Miller est\'an dados por los coeficientes $(h, k, l)$ que acompa\~nan a los $\vec{b}_{i}$ en el vector del espacio rec\'iproco $\vec{K} = h\vec{b}_{1} + k\vec{b}_{2} + l\vec{b}_{3}$
+Los \'indices de Miller est\'an dados por los coeficientes $(hkl)$ que acompa\~nan a los $\vec{b}_{i}$ en el vector del espacio rec\'iproco $\vec{K} = h\vec{b}_{1} + k\vec{b}_{2} + l\vec{b}_{3}$. Si alguno de los \'indices es negativo, por ejemplo $h$, se nota como $\overline{h}$.
 
 \begin{itemize}
 \item \textbf{Red SC:}
@@ -719,7 +720,23 @@ $$(110) \rightarrow \vec{K}_{110} = \frac{2 \pi}{a}(1\hat{x} + 1\hat{y} + 0\hat{
 
 $$(111) \rightarrow \vec{K}_{111} = \frac{2 \pi}{a}(1\hat{x} + 1\hat{y} + 1\hat{z}) = \frac{2 \pi}{a}(\hat{x} + \hat{y} + \hat{z})$$
 
-DIBUJO DE ESTOS PLANOS
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{miller_sc100.png}
+     \caption{Plano (100)}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{miller_sc110.png}
+    \caption{Plano (110)}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{miller_sc111.png}
+    \caption{Plano (111)}
+  \end{subfigure}
+  \caption{Planos dados por los \'indices de Miller $(hkl)$.}
+  \label{fig:miller_planos}
+\end{figure}
 
 Distancia entre planos $d = \frac{2\pi}{|\vec{K}|}$:
 
@@ -748,7 +765,6 @@ $$(110) \rightarrow \vec{K}_{110} = \frac{2 \pi}{a}(-\hat{x} - \hat{y} + \hat{z}
 
 $$(111) \rightarrow \vec{K}_{111} = \frac{2 \pi}{a}(-\hat{x} - \hat{y} + \hat{z} -\hat{x} + \hat{y} - \hat{z} + \hat{x} - \hat{y} - \hat{z}) = \frac{2 \pi}{a}(-\hat{x} - \hat{y} - \hat{z})$$
 
-DIBUJO DE ESTOS PLANOS
 
 Distancia entre planos $d = \frac{2\pi}{|\vec{K}|}$:
 
@@ -777,7 +793,6 @@ $$(110) \rightarrow \vec{K}_{110} = \frac{2 \pi}{a}(\hat{x} - \hat{y} + 2\hat{y}
 
 $$(111) \rightarrow \vec{K}_{111} = \frac{2 \pi}{a}(\hat{x} - \hat{y} + 2\hat{y} - \hat{y} + \hat{z}) = \frac{2 \pi}{a}(\hat{x} + \hat{z})$$
 
-DIBUJO DE ESTOS PLANOS
 
 Distancia entre planos $d = \frac{2\pi}{|\vec{K}|}$:
 
@@ -788,6 +803,49 @@ $$| \vec{K}_{110} | =  \sqrt{\bigg(\frac{2 \pi}{a}\bigg)^{2} + \bigg(\frac{2 \pi
 $$| \vec{K}_{111} | = | \vec{K}_{110} | \Rightarrow d_{111} = \frac{a}{\sqrt{2}}$$
 
 \end{itemize}
+
+\subsection{}
+
+Celda convencional ortorr\'ombica ($a = 2 \r{A}$, $b = 3 \r{A}$, $c = 4 \r{A}$; $\alpha = \beta = \gamma = \frac{\pi}{2}$):
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{tetragonal.png}
+     \caption{Cristal con par\'ametros de red y \'angulos generales.}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.35\linewidth}
+    \includegraphics[width=\linewidth]{ortorrombico.png}
+    \caption{Cristal ortorr\'ombico.}
+  \end{subfigure}
+  \caption{Esquema y caso particular de estructuras cristalinas.}
+  \label{fig:ortorrombico}
+\end{figure}
+
+$$\begin{cases}
+\vec{a}_{1} = 2 \textup{\r{A}}\hat{x}\\
+\vec{a}_{2} = 3 \textup{\r{A}} \hat{y} \\
+\vec{a}_{3} = 4 \textup{\r{A}} \hat{z}
+\end{cases}$$
+
+$$\Rightarrow V_{O} = | \vec{a}_{1} \cdot (\vec{a}_{2} \times \vec{a}_{3})| = 24 \textup{\r{A}}^{3} $$
+
+$$\Rightarrow \begin{cases}
+\vec{b}_{1} = \frac{\pi}{\textup{\r{A}}}\hat{x} \\
+\vec{b}_{2} = \frac{2\pi}{3\textup{\r{A}}}\hat{y} \\
+\vec{b}_{3} = \frac{\pi}{2\textup{\r{A}}}\hat{z}
+\end{cases}$$
+
+$$\Rightarrow \vec{K}_{112} = 1\vec{b}_{1} + 1\vec{b}_{2} + 2\vec{b}_{3} = \frac{\pi}{\textup{\r{A}}}\hat{x} + \frac{2\pi}{3\textup{\r{A}}}\hat{y} + \frac{\pi}{\textup{\r{A}}}\hat{z}$$
+
+Luego
+
+$$| \vec{K}_{112} | = \sqrt{\bigg(\frac{\pi}{\textup{\r{A}}}\bigg)^{2} + \bigg(\frac{2\pi}{3\textup{\r{A}}}\bigg)^{2} + \bigg(\frac{\pi}{\textup{\r{A}}}\bigg)^{2}} =  \sqrt{\frac{22}{3}} \frac{\pi}{\textup{\r{A}}} =  \frac{2\pi}{d_{112}}$$
+
+$$ \Rightarrow d_{112} = \sqrt{\frac{6}{11}}\textup{\r{A}} \approx 0.74 \textup{\r{A}}$$
+
+\subsection{}
+
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST

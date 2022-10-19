@@ -56,7 +56,7 @@
 \pagestyle{fancy} % All pages have headers and footers
 \fancyhead{} % Blank out the default header
 \fancyfoot{} % Blank out the default footer
-\fancyhead[C]{Apuntes y ejercicios resueltos de Estructura de la Materia 2 $\bullet$ Ignacio Poggi} % Custom header text
+\fancyhead[C]{Apuntes y ejercicios resueltos de Estructura de la Materia 2} % Custom header text
 \fancyfoot[C]{\thepage} % Custom footer text
 
 \usepackage{titling} % Customizing the title section
@@ -80,7 +80,7 @@
 \date{\today} % Leave empty to omit a date
 \renewcommand{\maketitlehookd}{%
 \begin{abstract}
-\noindent Apuntes y ejercicios resueltos de Estructura de la Materia 2 (2º cuatrimestre 2022).
+Apuntes y ejercicios resueltos de Estructura de la Materia 2 (2º cuatrimestre 2022).
 \end{abstract}
 }
 

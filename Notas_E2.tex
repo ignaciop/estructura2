@@ -846,6 +846,107 @@ $$ \Rightarrow d_{112} = \sqrt{\frac{6}{11}}\textup{\r{A}} \approx 0.74 \textup{
 
 \subsection{}
 
+Veamos primero $\vec{K}_{100}$ y $\vec{K}_{001}$ para los siguientes vectores primitivos:
+
+$$\begin{cases}
+\vec{a}_{1} = \frac{a}{2} (\hat{y} + \hat{z})\\
+\vec{a}_{2} = \frac{a}{2} (\hat{x} + \hat{z}) \\
+\vec{a}_{3} = \frac{a}{2} (\hat{x} + \hat{y})
+\end{cases}$$
+
+$$\Rightarrow V_{FCC} = | \vec{a}_{1} \cdot (\vec{a}_{2} \times \vec{a}_{3})| = \frac{a^{3}}{4} $$
+
+$$\Rightarrow \begin{cases}
+\vec{b}_{1} = \frac{2\pi}{a}(-\hat{x} + \hat{y} + \hat{z}) \\
+\vec{b}_{2} = \frac{2\pi}{a}(\hat{x} - \hat{y} + \hat{z}) \\
+\vec{b}_{3} = \frac{2\pi}{a}(\hat{x} + \hat{y} - \hat{z})
+\end{cases}$$
+
+Luego, $\vec{K}_{hkl} = h\vec{b}_{1} + k\vec{b}_{2} + l\vec{b}_{3} = h\frac{2\pi}{a}(-\hat{x} + \hat{y} + \hat{z}) + k\frac{2\pi}{a}(\hat{x} - \hat{y} + \hat{z}) + l\frac{2\pi}{a}(\hat{x} + \hat{y} - \hat{z})$
+
+$$\Rightarrow \begin{cases}
+\vec{K}_{100} = \frac{2\pi}{a}(-\hat{x} + \hat{y} + \hat{z}) \\
+\vec{K}_{001} = \frac{2\pi}{a}(\hat{x} + \hat{y} - \hat{z}) 
+\end{cases}$$
+\\
+
+Ahora, calculemos los \'indices de Miller para los $\vec{a}_{i}'$ definidos en el enunciado:
+
+$$\begin{cases}
+\vec{a}_{1}' = a\hat{x}\\
+\vec{a}_{2}' = \frac{a}{2} (\hat{x} + \hat{y}) \\
+\vec{a}_{3}' = \frac{a}{2} (\hat{y} + \hat{z})
+\end{cases}$$
+
+$$\Rightarrow V_{FCC} = | \vec{a}_{1}' \cdot (\vec{a}_{2}' \times \vec{a}_{3}')| = \frac{a^{3}}{4} $$
+
+$$\Rightarrow \begin{cases}
+\vec{b}_{1}' = \frac{2\pi}{a}(\hat{x} - \hat{y} + \hat{z}) \\
+\vec{b}_{2}' = \frac{4\pi}{a}(\hat{y} + \hat{z}) \\
+\vec{b}_{3}' = \frac{4\pi}{a}\hat{z}
+\end{cases}$$
+
+Entonces, $\vec{K}_{h'k'l'}' = h'\vec{b}_{1}' + k'\vec{b}_{2}' + l'\vec{b}_{3}' = h'\frac{2\pi}{a}(\hat{x} - \hat{y} + \hat{z}) + k'\frac{4\pi}{a}(\hat{y} + \hat{z}) + l'\frac{4\pi}{a}\hat{z}$
+\\
+
+Finalmente, comparamos en cada direcci\'on los $\vec{K}_{hkl}$ y $\vec{K'}_{h'k'l'}$:
+
+\begin{itemize}
+\item $\vec{K}_{100}$:
+
+$$ \hat{x}) h'\frac{2\pi}{a} = -\frac{2\pi}{a} \Rightarrow h' = -1$$
+$$ \hat{y}) h'\frac{2\pi}{a} + k'\frac{4\pi}{a} = \frac{2\pi}{a} \Rightarrow k' = 0$$
+$$ \hat{z}) h'\frac{2\pi}{a} - k'\frac{4\pi}{a} + l'\frac{4\pi}{a} = \frac{2\pi}{a} \Rightarrow l' = 1$$
+
+Por lo tanto, $(100)$ corresponden a $(\overline{1}01)$.
+
+
+\item $\vec{K}_{001}$:
+
+$$ \hat{x}) h'\frac{2\pi}{a} = \frac{2\pi}{a} \Rightarrow h' = 1$$
+$$ \hat{y}) -h'\frac{2\pi}{a} + k'\frac{4\pi}{a} = \frac{2\pi}{a} \Rightarrow k' = 1$$
+$$ \hat{z}) h'\frac{2\pi}{a} - k'\frac{4\pi}{a} + l'\frac{4\pi}{a} = -\frac{2\pi}{a} \Rightarrow l' = 0$$
+
+Entonces, $(001)$ corresponden a $(110)$.
+
+\end{itemize}
+
+\subsection{}
+
+El factor de estructura se define como:
+
+\begin{equation}
+\label{eq:fe}
+S_{\vec{K}} = \sum_{j} f_{\vec{d}}^{j}e^{i\vec{K} \cdot \vec{d}_{j}}
+\end{equation}
+
+donde $\vec{K} \in$ RR, y $\vec{d}_{j}$ es el $j$-\'esimo vector de la base de la red.\\
+
+Escribimos a la red FCC como SC + $\{{\vec{0}, \frac{a}{2}(\hat{x} + \hat{y}), \frac{a}{2}(\hat{x} + \hat{z}), \frac{a}{2}(\hat{y} + \hat{z})}\}$. Reemplazando esto en la ecuaci\'on (\ref{eq:fe}) teniendo en cuenta que los $f_{\vec{d}}^{j}$ son todos iguales (mismo tipo de \'atomo en toda la red) y adem\'as $\vec{K} = \frac{2\pi}{a}(n_{1}\hat{x} + n_{2}\hat{y} + n_{3}\hat{z})$, obtenemos:
+
+$$S_{\vec{K}} = \sum_{j = 1}^{4} fe^{i\vec{K} \cdot \vec{d}_{j}} = f\sum_{j = 1}^{4} e^{i\vec{K} \cdot \vec{d}_{j}} = f\bigg(1 + e^{i\vec{K} \cdot \frac{a}{2}(\hat{x} + \hat{y})} + e^{i\vec{K} \cdot \frac{a}{2}(\hat{x} + \hat{z})} + e^{i\vec{K} \cdot \frac{a}{2}(\hat{y} + \hat{z})}\bigg)$$
+
+$$\Rightarrow S_{\vec{K}} = f\bigg(1 + e^{i\pi(n_{2} + n_{3})} + e^{i\pi(n_{1} + n_{3})} + e^{i\pi(n_{1} + n_{2})}\bigg) = f\bigg(1 + (-1)^{n_{2} + n_{3}} + (-1)^{n_{1} + n_{3}} + (-1)^{n_{1} + n_{2}}\bigg)$$
+\\
+
+En conclusi\'on, $S_{\vec{K}} = 4f$ si los $n_{i}$ son todos pares o impares. En cualquier otro caso, $S_{\vec{K}} = 0$.\\
+
+Si tomamos $f = 1$, obtenemos el resultado del enunciado.\\
+
+Si se remueven los puntos tales que $S_{\vec{K}} = 0$, nos queda una red BCC de par\'ametro $\frac{4\pi}{a}$, ya que es la RR de una FCC con par\'ametro $a$.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.3\linewidth,height=0.3\linewidth]{sk.png}
+  \caption{Los puntos en rojo son los que cumplen que $S_{\vec{K}} = 0$ (alg\'un $n_{i}$ par y los dem\'as pares, o viceversa), por lo tanto se remueven de la red; quedando solo los puntos en azul (todos los $n_{i}$ con la misma paridad) conformando una BCC.}
+  \label{fig:sk}
+\end{figure}
+
+\subsection{}
+\subsection{}
+
+
+
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST

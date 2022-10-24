@@ -978,7 +978,136 @@ $$\Rightarrow S_{\vec{K}} = \sum_{j = 1}^{n} f_{j}(\vec{K})e^{i\vec{K} \cdot \ve
 
 \section{Gu\'ia 2: Energ\'ia de cohesi\'on}
 
+Los cristales moleculares est\'an formados por gases nobles que son \'atomos con capa llena. Debido a las fluctuaciones cu\'anticas en la distribuci\'on de carga de estos \'atomos, se inducen dipolos, que interactuan seg\'un la ley de van der Waals-London y puede modelarse como un potencial atractivo $r^{-6}$.\\
+
+Adem\'as, a medida que los átomos se acercan, sus nubes electrónicas comienzan a solaparse. Por al principio de exclusi\'on de Pauli, esto puede suceder solo si se promueven electrones a niveles de mayor energ\'ia desocupados, produci\'endose un aumento de la energ\'ia total del sistema que se manifiesta como una contribución repulsiva en el potencial dado por $r^{-12}$.\\
+
+Ambos t\'erminos forman el \textbf{potencial de Lennard-Jones 6-12}, dado por:
+
+\begin{equation}
+\label{eq:lj}
+\phi(r) = 4\epsilon\left[\left( \frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^{6} \right]
+\end{equation}
+
+que describe la interacción entre un par de part\'iculas. Aqu\'i, $r$ es la distancia entre \'atomos y $\sigma$ y $\epsilon$ son constantes emp\'iricas de distancia y energ\'ia proporcionales a la distancia de equilibrio y la intensidad de la interacci\'on, respectivamente. Luego, la interacci\'on de un \'atomo en el origen con los dem\'as es:
+
+\begin{equation}
+\label{eq:phi}
+\Phi(r) = \sum_{\vec{R} \neq 0} \phi(R) 
+\end{equation}
+
+donde $\vec{R} \in$ RD  y $R = |\vec{R}|$. Para no contar dos veces la misma interacci\'on, multiplicamos $U_{tot}$ por $\frac{N}{2}$:
+
+\begin{equation}
+\label{eq:utot}
+U_{tot} = \frac{N}{2}\sum_{\vec{R} \neq 0} \phi(R) 
+\end{equation}
+
+La energ\'ia por \'atomo entonces estar\'a dada por $u = \frac{U_{tot}}{N}$:
+
+\begin{equation}
+\label{eq:uat}
+u = \frac{1}{2}\sum_{\vec{R} \neq 0} \phi(R) = 2\epsilon\sum_{\vec{R} \neq 0}\left[\left( \frac{\sigma}{R}\right)^{12} - \left(\frac{\sigma}{R}\right)^{6} \right]
+\end{equation}
+
+Simplifiquemos un poco m\'as la ecuaci\'on anterior. Siempre podemos escribir la distancia a cualquier punto de la red como un producto de la distancia a primeros vecinos $R_{1} = r$ por un factor $\alpha(\vec{R}) \Rightarrow R = \alpha(\vec{R})r$. Reemplazando en (\ref{eq:uat}) obtenemos la siguiente expresi\'on:
+
+\begin{equation}
+\label{eq:uat2}
+u = 2\epsilon\sum_{\vec{R} \neq 0}\left[\left( \frac{\sigma}{\alpha(\vec{R})r}\right)^{12} - \left(\frac{\sigma}{\alpha(\vec{R})r}\right)^{6} \right] = 2\epsilon\sum_{\vec{R} \neq 0}\left[\frac{1}{\alpha(\vec{R})^{12}}\left(\frac{\sigma}{r}\right)^{12} -  \frac{1}{\alpha(\vec{R})^{6}}\left(\frac{\sigma}{r}\right)^{6} \right]
+\end{equation}
+
+\begin{equation}
+\label{eq:uat3}
+\Rightarrow 2\epsilon\left[ \left( \sum_{\vec{R} \neq 0}\frac{1}{\alpha(\vec{R})^{12}} \right)\left(\frac{\sigma}{r}\right)^{12} - \left( \sum_{\vec{R} \neq 0}\frac{1}{\alpha(\vec{R})^{6}} \right)\left(\frac{\sigma}{r}\right)^{6} \right] = 2\epsilon\left[ A_{12}\left(\frac{\sigma}{r}\right)^{12} - A_{6}\left(\frac{\sigma}{r}\right)^{6} \right]
+\end{equation}
+\\
+
+donde $A_{n} = \sum_{\vec{R} \neq 0} \frac{1}{\alpha(\vec{R})r^{n}}$ es la suma de red.\\
+
+Una forma m\'as intuitiva para las $A_{n}$ se obtiene separando esta suma en vecinos. Si llamamos $\{\vec{R}_{i}\}$ al conjunto de vectores que describen los $i$-\'esimos vecinos, como la distancia a todos los $i$-\'esimos vecinos es la misma, podemos denotar $\alpha_{i} = \alpha(\vec{R}_{i})$. Entonces:
+
+\begin{equation}
+\label{eq:an}
+A_{n} = \sum_{\vec{R} \neq 0} \frac{1}{\alpha(\vec{R})^{n}} = \sum_{\{\vec{R_{1}}\}} \frac{1}{\alpha(\vec{R})^{n}} + \sum_{\{\vec{R_{2}}\}} \frac{1}{\alpha(\vec{R})^{n}} + \sum_{\{\vec{R_{3}}\}} \frac{1}{\alpha(\vec{R})^{n}} + ...
+\end{equation}
+
+\begin{equation}
+\label{eq:an2}
+\Rightarrow A_{n} = \sum_{\{\vec{R_{1}}\}} \frac{1}{\alpha_{1}^{n}} + \sum_{\{\vec{R_{2}}\}} \frac{1}{\alpha_{2}^{n}} + \sum_{\{\vec{R_{3}}\}} \frac{1}{\alpha_{3}^{n}} + ... = \frac{1}{\alpha_{1}^{n}}\sum_{\{\vec{R_{1}}\}} 1 + \frac{1}{\alpha_{2}^{n}}\sum_{\{\vec{R_{2}}\}} 1 + \frac{1}{\alpha_{3}^{n}}\sum_{\{\vec{R_{3}}\}} 1 + ...
+\end{equation}
+
+\begin{equation}
+\label{eq:an3}
+\Rightarrow A_{n} = \#_{1} + \frac{\#_{2}}{\alpha_{2}^{n}} + \frac{\#_{3}}{\alpha_{3}^{n}} ...
+\end{equation}
+
+donde $\#_{j}$ el el n\'umero de $j$-\'esimos vecinos y $\alpha_{1} = 1$ por definici\'on (a medida que aumenta $n$, los ordenes superiores de la suma de vecinos se vuelven menos relevantes.\\
+
+Para finalizar esta introducci\'on, sabemos que la configuraci\'on m\'as estable para la estructura es la que minimiza la energ\'ia de cohesi\'on por \'atomo $u$. El m\'inimo se da en la distancia de equilibrio $r_{0}$ , que es la distancia a primeros vecinos:
+
+$$ 0 = \frac{du}{dr}\bigg|_{r = r_{0}} = 2\epsilon\left[ -12A_{12}\left(\frac{\sigma}{r_{0}}\right)^{13} + 6A_{6}\left(\frac{\sigma}{r_{0}}\right)^{7} \right] \Rightarrow 2A_{12}\left(\frac{\sigma}{r_{0}}\right)^{6} = A_{6}$$
+
+$$ \Rightarrow r_{0} = \left( \frac{2A_{12}}{A_{6}}\right)^{\frac{1}{6}}\sigma$$
+
+Por lo tanto, la energía de cohesi\'on de equilibrio por part\'icula es $u(r = r_{0})$:
+
+\begin{equation}
+\label{eq:ur0}
+u(r_{0}) = 2\epsilon\left[ A_{12}\left(\frac{A_{6}}{2A_{12}}\right)^{2} - A_{6}\left(\frac{A_{6}}{2A_{12}}\right) \right] = -\frac{\epsilon A_{6}^{2}}{2A_{12}}
+\end{equation}
+
+
 \subsection{}
+
+Simplemente, reemplazamos los datos del enunciado en la ecuaci\'on (\ref{eq:ur0}) para cada estructura del Ne:
+
+$$\Rightarrow \begin{cases}
+u_{SC} = -0.01764\, eV \\
+u_{BCC} = -0.02553408089\, eV \\
+u_{FCC} = -0.02669161706\, eV \\
+u_{HCP} = -0.02669429758\, eV
+\end{cases}$$
+\\
+
+Vemos que la de menor energ\'ia es la HCP, aunque la observada experimentalmente es la FCC.\\
+
+En la siguiente tabla se detallan los primeros y segundos vecinos para estas estructuras:\\
+
+\begin{center}
+\begin{tabular}{|ccc|}
+\hline
+	 & \textbf{FCC} & \textbf{HCP}\\
+	1º vecinos & 12 & 12\\
+	2º vecinos & 6 & 2\\
+\hline
+\end{tabular}
+\end{center}
+
+Vemos que la FCC tiene m\'as densidad de segundos vecinos que la HCP, por lo tanto es de esperarse que la suma de red sea mayor, y por ende su energ\'ia de cohesi\'on tambi\'en (un caso donde teor\'ia $\neq$ pr\'actica).
+
+\subsection{}
+
+Para \'atomos i\'onicos, se propone el siguiente potencial:
+
+\begin{equation}
+\label{eq:cb}
+\phi(r) = -\alpha\frac{q^{2}}{r} + \frac{C}{r^{m}}
+\end{equation}
+
+donde $\alpha$ es la constante de Madelung, $q$ es la carga del \'atomo y $c$ y $m$ par\'ametros fenomenol\'ogicos. Procediendo de la misma manera que antes, obtenemos que la energ\'ia de cohesi\'on por \'atomo es:
+
+\begin{equation}
+\label{eq:uat4}
+u = \frac{1}{2}\left[ \sum_{\vec{R} \neq 0} \frac{q(\vec{r})q(\vec{r} + \vec{R})}{R} + \sum_{\vec{R} \neq 0} \frac{C}{R^{n}} \right]
+\end{equation}
+
+En este problema, el sodio tiene una estructura BCC con los par\'ametros dados en el enunciado. Reemplaz\'andolos en (\ref{eq:uat4}), obtenemos el siguiente potencial:
+
+$$u = -\alpha \frac{e^{2}}{r} + 8\frac{e^{2}}{r^{m}}$$
+
+
+
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST

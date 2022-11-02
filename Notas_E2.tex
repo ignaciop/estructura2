@@ -1166,10 +1166,69 @@ Para la red panal de abejas, tenemos 3 primeros y 6 segundos vecinos, como muest
 
 Luego, la energ\'ia por sitio ser\'a:
 
-$$ u = \frac{1}{2} \left[ \sum_{\vec{R}_{1^{os} vecinos}} \phi(|\vec{R}|) + \sum_{\vec{R}_{2^{os} vecinos}} \phi(|\vec{R}|)\right] = \frac{1}{2} \left[3\phi(\vec{R}_{1^{os} vecinos}) + 6\phi(\vec{R}_{2^{os} vecinos})\right]$$
+$$ u = \frac{1}{2} \left[ \sum_{\vec{R}_{1^{os} vecinos}} \phi(|\vec{R}|) + \sum_{\vec{R}_{2^{os} vecinos}} \phi(|\vec{R}|)\right] = \frac{1}{2} \left[3\phi(\vec{R}_{1^{os} vecinos}) + 6\phi(\vec{R}_{2^{os} vecinos})\right]$$\\
 
+Los valores para $\vec{R}_{1^{os} vecinos}$ y $\vec{R}_{2^{os} vecinos}$ salen por trigonometr\'ia. Finalmente, hay que reemplazar y minimizar $u$ respecto de $a$.
 
+\subsection{}
 
+Para la interacci\'on entre cada par de iones tenemos que:
+
+\begin{equation}
+\label{eq:ej26}
+\Phi_{ij} = \pm \frac{e^{2}}{r_{ij}} + \frac{\gamma}{r^{n}_{ij}}
+\end{equation}
+
+Luego la energ\'ia total (a primeros vecinos, 6 en el caso del NaCl) ser\'a:
+
+$$ u = u^{Coulomb} + u^{core} = -\frac{e^{2}}{r}\left[ \frac{1}{\alpha(\vec{d})} + \sum_{\vec{R} \neq \vec{0}} \frac{1}{\alpha(\vec{R} + \vec{d})}  - \frac{1}{\alpha(\vec{R})} \right] + \sum_{ij} \frac{\gamma}{r^{n}_{ij}}$$
+
+\begin{equation}
+\label{eq:ej262}
+\Rightarrow u(r) = - \alpha \frac{e^{2}}{r} + 6\frac{\gamma}{r^{n}}
+\end{equation}
+
+Ahora derivamos la ecuaci\'on (\ref{eq:ej262}) e igualamos a 0 para hallar la distancia de equilibrio, y luego con eso la energ\'ia de cohesi\'on:
+
+\begin{equation}
+\label{eq:ej263}
+\frac{du(r)}{dr} = 0 \Rightarrow \alpha \frac{e^{2}}{r^{2}} - 6n\gamma r^{-n-1} = 0
+\end{equation}
+
+$$ \Rightarrow \frac{n6 \gamma}{r_{0}^{n+1}} = \alpha \frac{e^{2}}{r_{0}^{2}} \Rightarrow \frac{n6\gamma}{\alpha e^{2}} = r_{0}^{n-1}$$\\
+
+Por otro lado, por el enunciado sabemos que el m\'odulo de bulk es $B = -V \frac{\partial P}{\partial V} = v \frac{\partial}{\partial v}\left( \frac{\partial u}{\partial v}\right)$, con $v = \frac{V}{N} = \frac{a^{3}}{8}$ (esto lo vimos en los ejercicios de la gu\'ia anterior).\\
+
+Teniendo en cuenta adem\'as que $r = \frac{a}{2}$ (luego $r = v^{\frac{1}{3}}$) y $\frac{\partial u}{\partial v} = \frac{\partial u}{\partial r}\frac{\partial r}{\partial v}$, entonces:\\
+
+$$ u(v) = \frac{6\gamma}{v^{\frac{n}{3}}} - \alpha \frac{e^{2}}{v^{\frac{1}{3}}}$$
+
+$$ \Rightarrow \frac{\partial u(v)}{\partial v} = -\frac{n}{3}\frac{6\gamma}{v^{\frac{n}{3} + 1}} +\frac{1}{3} \alpha \frac{e^{2}}{v^{\frac{4}{3}}}$$
+
+$$ \Rightarrow \frac{\partial^{2} u(v)}{\partial v^{2}} = \left(-\frac{n}{3}- 1\right)\left(-\frac{n}{3}\right)\frac{6\gamma}{v^{\frac{n}{3} + 2}} -\frac{4}{3}\frac{1}{3} \alpha \frac{e^{2}}{v^{\frac{4}{3} + 1}}$$\\
+
+Reemplazamos lo anterior en la definici\'on de $B$, nos queda lo siguiente:\\
+
+$$ B = v \frac{\partial^{2} u(v)}{\partial v^{2}} = \left(\frac{n}{3}- 1\right)\left(-\frac{n}{3}\right)\frac{6\gamma}{v^{\frac{n}{3} + 1}} -\frac{4}{9} \alpha \frac{e^{2}}{v^{\frac{4}{3}}} = \left(\frac{n}{3} + 1\right)\frac{n}{3}\frac{6\gamma}{v^{\frac{n}{3} + 1}} -\frac{4}{9} \alpha \frac{e^{2}}{v^{\frac{4}{3}}} $$\\
+
+Volviendo a $ v = r^{3}$:\\
+
+$$ B = \left(\frac{n}{3} + 1\right)\frac{n}{3}\frac{6\gamma}{r^{n}r^{3}} -\frac{4}{9} \alpha \frac{e^{2}}{r^{4}} $$\\
+
+Por \'ultimo, tenemos las siguientes dos ecuaciones con dos inc\'ognitas ($n, \gamma$):
+
+$$\begin{cases}
+B(r_{0}) = \left(\frac{n}{3} + 1\right)\frac{n}{3}\frac{6\gamma}{r_{0}^{n + 3}} -\frac{4}{9} \alpha \frac{e^{2}}{r_{0}^{4}} \\
+\frac{n6\gamma}{\alpha e^{2}} = r_{0}^{n-1}
+\end{cases}$$
+
+$$B(r_{0}) = \frac{1}{3}\left( 1 + \frac{n}{3}\right)r_{0}^{n-1} \frac{\alpha e^{2}}{r_{0}^{n}r_{0}^{3}} - \frac{4}{9}\alpha \frac{e^{2}}{r_{0}^{4}} = \left( 1 + \frac{n}{3}\right)\frac{\alpha e^{2}}{3r_{0}^{4}} - \frac{4}{9}\alpha \frac{e^{2}}{r_{0}^{4}} = \alpha \frac{e^{2}}{r_{0}^{4}} \left( \frac{n-1}{9}\right) $$
+
+$$ \Rightarrow \frac{9B(r_{0})r_{0}^{4}}{\alpha e^{2}} + 1 = n$$.\\
+
+El valor de $\gamma$ sale reemplazando este $n$ en la segunda ecuaci\'on.
+
+\subsection{}
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST

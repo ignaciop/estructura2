@@ -1311,8 +1311,6 @@ Observamos que se obtiene la llamada \textit{interacci\'on de van der Waals}.
 
 \section{Gu\'ia 3: Din\'amica de redes}
 
-
-
 En las gu\'ias anteriores tratamos a las redes como objetos est\'aticos, en un estado promedio. Ahora estudiaremos la din\'amica de las redes a trav\'es de sus vibraciones (modos normales), partiendo de un enfoque cl\'asico y cuantizando los estados para encontrar sus propiedades termodin\'amicas.\\
 
 Supongamos que los \'atomos realizan \'unicamente peque\~nas oscilaciones $\vec{u}$ con respecto a sus posiciones promedio $\vec{R}$, es decir:
@@ -1321,24 +1319,24 @@ $$ \vec{r}_{\vec{n}\alpha} = \vec{R}_{\vec{n}\alpha} + \vec{u}_{\vec{n}\alpha}$$
 
 donde $\vec{n} = (n_{1}, n_{2}, n_{3})$ es la etiqueta de la celda y $\alpha \in (1, 2, ...)$ una etiqueta de la base.\\
 
-Sea $\phi = \phi(\{ \vec{r}_{\vec{n}\alpha}\})$ el potencial en todo el cristal, entonces desarrollando en serie de Taylor obtenemos:\\
+Sea $\Phi = \Phi(\{ \vec{r}_{\vec{n}\alpha}\})$ el potencial en todo el cristal, entonces desarrollando en serie de Taylor obtenemos:\\
 
-$$\phi(\{ \vec{r}_{\vec{n}\alpha}\}) = \phi(\{ \vec{R}_{\vec{n}\alpha} + \vec{u}_{\vec{n}\alpha}\}) \approx \phi(\{ \vec{R}_{\vec{n}\alpha}\}) + \frac{1}{2}\sum_{\vec{n},\alpha, i, \vec{m}, \beta, j} \frac{\partial^{2}\phi}{\partial r_{\vec{n}\alpha i}\partial r_{\vec{m} \beta j}}u_{\vec{n}\alpha i}u_{\vec{m} \beta j}$$
+$$\Phi(\{ \vec{r}_{\vec{n}\alpha}\}) = \Phi(\{ \vec{R}_{\vec{n}\alpha} + \vec{u}_{\vec{n}\alpha}\}) \approx \Phi(\{ \vec{R}_{\vec{n}\alpha}\}) + \frac{1}{2}\sum_{\vec{n},\alpha, i, \vec{m}, \beta, j} \frac{\partial^{2}\Phi}{\partial r_{\vec{n}\alpha i}\partial r_{\vec{m} \beta j}}u_{\vec{n}\alpha i}u_{\vec{m} \beta j}$$
 
 \begin{equation}
 \label{din1}
-\Rightarrow \phi(\{ \vec{r}_{\vec{n}\alpha}\}) = \phi_{0} + \frac{1}{2}\sum_{\vec{n},\alpha, i, \vec{m}, \beta, j} \phi^{\vec{m} \beta j}_{\vec{n}\alpha i}u_{\vec{n}\alpha i}u_{\vec{m} \beta j}
+\Rightarrow \Phi(\{ \vec{r}_{\vec{n}\alpha}\}) = \Phi_{0} + \frac{1}{2}\sum_{\vec{n},\alpha, i, \vec{m}, \beta, j} \Phi^{\vec{m} \beta j}_{\vec{n}\alpha i}u_{\vec{n}\alpha i}u_{\vec{m} \beta j}
 \end{equation}
 
-donde $ \phi^{\vec{m} \beta j}_{\vec{n}\alpha i} = \frac{\partial^{2}\phi}{\partial r_{\vec{n}\alpha i}\partial r_{\vec{m} \beta j}} $ son las constantes de acoplamiento y $\phi_{0} = \phi(\{ \vec{R}_{\vec{n}\alpha}\})$. El paso siguiente es plantear las ecuaciones de movimiento $\vec{F} = m\vec{a}$ para un \'atomo $\alpha$ en la celda $n$, luego:\\
+donde $ \Phi^{\vec{m} \beta j}_{\vec{n}\alpha i} = \frac{\partial^{2}\Phi}{\partial r_{\vec{n}\alpha i}\partial r_{\vec{m} \beta j}} $ son las constantes de acoplamiento y $\Phi_{0} = \Phi(\{ \vec{R}_{\vec{n}\alpha}\})$. El paso siguiente es plantear las ecuaciones de movimiento $\vec{F} = m\vec{a}$ para un \'atomo $\alpha$ en la celda $n$, luego:\\
 
-$$ F_{\vec{n}\alpha i} = -\frac{\partial}{\partial r_{\vec{n}\alpha i}} \phi(\{ \vec{r}_{\vec{m}\beta}\}) = -\frac{\partial}{\partial u_{\vec{n}\alpha i}} \phi(\{ \vec{r}_{\vec{m}\beta}\}) = \frac{1}{2}\sum_{\vec{m}, \beta, j} \phi^{\vec{m} \beta j}_{\vec{n}\alpha i}u_{\vec{m} \beta j} + \frac{1}{2}\sum_{\vec{m}, \beta, j} \phi^{\vec{n} \alpha i}_{\vec{m}\beta j}u_{\vec{m} \beta j} = \sum_{\vec{m}, \beta, j} \phi^{\vec{m} \beta j}_{\vec{n}\alpha i}u_{\vec{m} \beta j}$$
+$$ F_{\vec{n}\alpha i} = -\frac{\partial}{\partial r_{\vec{n}\alpha i}} \Phi(\{ \vec{r}_{\vec{m}\beta}\}) = -\frac{\partial}{\partial u_{\vec{n}\alpha i}} \Phi(\{ \vec{r}_{\vec{m}\beta}\}) = \frac{1}{2}\sum_{\vec{m}, \beta, j} \Phi^{\vec{m} \beta j}_{\vec{n}\alpha i}u_{\vec{m} \beta j} + \frac{1}{2}\sum_{\vec{m}, \beta, j} \Phi^{\vec{n} \alpha i}_{\vec{m}\beta j}u_{\vec{m} \beta j} = \sum_{\vec{m}, \beta, j} \Phi^{\vec{m} \beta j}_{\vec{n}\alpha i}u_{\vec{m} \beta j}$$
 
-pues $\phi^{\vec{n} \alpha i}_{\vec{m}\beta j} = \phi^{\vec{m} \beta j}_{\vec{n}\alpha i} $. Si la masa de $\alpha$ es $M_{\alpha}$, entonces la ecuaci\'on de movimiento nos queda:\\
+pues $\Phi^{\vec{n} \alpha i}_{\vec{m}\beta j} = \Phi^{\vec{m} \beta j}_{\vec{n}\alpha i} $. Si la masa de $\alpha$ es $M_{\alpha}$, entonces la ecuaci\'on de movimiento nos queda:\\
 
 \begin{equation}
 \label{eq:din2}
-\sum_{\vec{m}, \beta, j} \phi^{\vec{m} \beta j}_{\vec{n}\alpha i}u_{\vec{m} \beta j} = M_{\alpha}\ddot{u}_{\vec{n} \alpha i}
+\sum_{\vec{m}, \beta, j} \Phi^{\vec{m} \beta j}_{\vec{n}\alpha i}u_{\vec{m} \beta j} = M_{\alpha}\ddot{u}_{\vec{n} \alpha i}
 \end{equation}
 \\
 Proponemos la siguiente soluci\'on:\\
@@ -1350,15 +1348,15 @@ u_{\vec{n} \alpha i} = \frac{1}{\sqrt{M_{\alpha}}}u_{\alpha i}(\vec{q})e^{i(\vec
 
 donde $\vec{q}$ es un vector de onda y $u_{\alpha i}$ una funci\'on desconocida. Reemplazando (\ref{eq:din3}) en (\ref{eq:din2}):\\
 
-$$ \sum_{\vec{m}, \beta, j} \phi^{\vec{m} \beta j}_{\vec{n}\alpha i}\frac{1}{\sqrt{M_{\beta}}}u_{\beta j}(\vec{q})e^{i(\vec{q}\cdot \vec{r}_{m} - \omega t)} - \sqrt{M_{\alpha}}\omega^{2}u_{\alpha i}(\vec{q})e^{i(\vec{q}\cdot \vec{r}_{n} - \omega t)}$$
+$$ \sum_{\vec{m}, \beta, j} \Phi^{\vec{m} \beta j}_{\vec{n}\alpha i}\frac{1}{\sqrt{M_{\beta}}}u_{\beta j}(\vec{q})e^{i(\vec{q}\cdot \vec{r}_{m} - \omega t)} - \sqrt{M_{\alpha}}\omega^{2}u_{\alpha i}(\vec{q})e^{i(\vec{q}\cdot \vec{r}_{n} - \omega t)}$$
 
-$$ \Rightarrow \sum_{\vec{m}, \beta, j} \phi^{\vec{m} \beta j}_{\vec{n}\alpha i}\frac{1}{\sqrt{M_{\beta}M_{\alpha}}}u_{\beta j}(\vec{q})e^{i\vec{q}\cdot(\vec{r}_{m} -\vec{r}_{n})} = \omega^{2}u_{\alpha i}(\vec{q})$$\\
+$$ \Rightarrow \sum_{\vec{m}, \beta, j} \Phi^{\vec{m} \beta j}_{\vec{n}\alpha i}\frac{1}{\sqrt{M_{\beta}M_{\alpha}}}u_{\beta j}(\vec{q})e^{i\vec{q}\cdot(\vec{r}_{m} -\vec{r}_{n})} = \omega^{2}u_{\alpha i}(\vec{q})$$\\
 
 Con lo cual, definimos la \textit{matriz din\'amica} de la siguiente manera:\\
 
 \begin{equation}
 \label{eq:matrizdin}
-D^{\beta j}_{\alpha i}(\vec{q}, \vec{n}) = \frac{1}{\sqrt{M_{\beta}M_{\alpha}}} \sum_{\vec{m}} \phi^{\vec{m} \beta j}_{\vec{n}\alpha i} e^{i\vec{q}\cdot(\vec{r}_{m} -\vec{r}_{n})}
+D^{\beta j}_{\alpha i}(\vec{q}, \vec{n}) = \frac{1}{\sqrt{M_{\beta}M_{\alpha}}} \sum_{\vec{m}} \Phi^{\vec{m} \beta j}_{\vec{n}\alpha i} e^{i\vec{q}\cdot(\vec{r}_{m} -\vec{r}_{n})}
 \end{equation}
 
 con lo cual, el problema se reduce a calcular los autovalores $\omega^{2}$ y autovectores $u_{\alpha i}(\vec{q})$, pidiendo determinante nulo para que la soluci\'on sea no trivial:
@@ -1366,6 +1364,24 @@ con lo cual, el problema se reduce a calcular los autovalores $\omega^{2}$ y aut
 $$ |D^{\beta j}_{\alpha i}(\vec{q}, \vec{n}) - \omega^{2}\mathbb{I}| = 0$$
 
 \subsection{}
+
+En este problema unidimensional, $i = j = 1$. Como adem\'as, la cadena es monoat\'omica, $\alpha = \beta = 1$. Luego la ecuaci\'on (\ref{eq:matrizdin}) nos queda:\\
+
+$$ D(\vec{q}) = \frac{1}{M}\sum_{m}\Phi^{m}_{n}e^{iq(r_{m} - r_{n})}$$
+
+Seg\'un el enunciado, las interacciones son a primeros vecinos y $r_{m} = ma$, entonces el potencial se reduce a:\\
+
+$$  \Phi^{m}_{n} = \begin{cases}
+k \text { si \textit{m, n} son primeros vecinos} \\
+0 \text { en otro caso}
+\end{cases}$$
+
+$$ \Rightarrow D(\vec{q}) = \frac{1}{M}\sum_{m}\Phi^{m}_{n}e^{iq(r_{m} - r_{n})} = \frac{k}{M}(-e^{iqa} - e^{-iqa} + 2) = \frac{2k}{M}[1 - cos(qa)]$$
+
+$$ \Rightarrow \omega = \sqrt{\frac{2k}{M}[1 - cos(qa)]}$$
+
+\subsection{}
+
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
